@@ -7,8 +7,6 @@
 #ifndef RemoteTransmitter_h
 #define RemoteTransmitter_h
 
-#include <Arduino.h>
-
 /**
 * RemoteTransmitter provides a generic class for simulation of common RF remote controls, like the 'Klik aan Klik uit'-system
 * (http://www.klikaanklikuit.nl/), used to remotely switch lights etc.

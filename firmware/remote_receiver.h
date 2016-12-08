@@ -7,8 +7,6 @@
 #ifndef RemoteReceiver_h
 #define RemoteReceiver_h
 
-#include <Arduino.h>
-
 typedef void (*RemoteReceiverCallBack)(unsigned long, unsigned int);
 
 /**
