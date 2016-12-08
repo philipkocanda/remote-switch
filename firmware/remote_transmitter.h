@@ -7,6 +7,22 @@
 #ifndef RemoteTransmitter_h
 #define RemoteTransmitter_h
 
+#define ARDUINO_H
+#include <stdint.h>
+#include <stddef.h>
+#include <stdlib.h>
+
+#include "spark_wiring.h"
+#include "spark_wiring_interrupts.h"
+
+// to make it compile
+#define boolean bool
+#pragma GCC diagnostic ignored "-Wwrite-strings"
+#pragma GCC diagnostic ignored "-Wconversion-null"
+#pragma GCC diagnostic ignored "-Wpointer-arith"
+#pragma GCC diagnostic ignored "-Wsign-compare"
+#pragma GCC diagnostic ignored "-Wreturn-type"
+
 /**
 * RemoteTransmitter provides a generic class for simulation of common RF remote controls, like the 'Klik aan Klik uit'-system
 * (http://www.klikaanklikuit.nl/), used to remotely switch lights etc.

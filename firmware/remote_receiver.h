@@ -7,6 +7,22 @@
 #ifndef RemoteReceiver_h
 #define RemoteReceiver_h
 
+#define ARDUINO_H
+#include <stdint.h>
+#include <stddef.h>
+#include <stdlib.h>
+
+#include "spark_wiring.h"
+#include "spark_wiring_interrupts.h"
+
+// to make it compile
+#define boolean bool
+#pragma GCC diagnostic ignored "-Wwrite-strings"
+#pragma GCC diagnostic ignored "-Wconversion-null"
+#pragma GCC diagnostic ignored "-Wpointer-arith"
+#pragma GCC diagnostic ignored "-Wsign-compare"
+#pragma GCC diagnostic ignored "-Wreturn-type"
+
 typedef void (*RemoteReceiverCallBack)(unsigned long, unsigned int);
 
 /**
