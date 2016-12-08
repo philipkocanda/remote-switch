@@ -51,7 +51,7 @@ void RemoteTransmitter::sendTelegram(unsigned short trits[]) {
 */
 void RemoteTransmitter::sendTelegram(unsigned long data, unsigned short pin) {
 	unsigned int periodusec = (unsigned long)data >> 23;
-	unsigned short repeats = ((unsigned long)data >> 20) & B111;
+	unsigned short repeats = ((unsigned long)data >> 20) & 7;
 
 	sendCode(pin, data, periodusec, repeats);
 }
@@ -69,7 +69,7 @@ void RemoteTransmitter::sendCode(unsigned short pin, unsigned long code, unsigne
 		code/=3;
 	}
 
-	repeats = 1 << (repeats & B111); // repeats := 2^repeats;
+	repeats = 1 << (repeats & 7); // repeats := 2^repeats;
 
 	for (unsigned short int j=0;j<repeats;j++) {
 		// Sent one telegram
@@ -77,7 +77,7 @@ void RemoteTransmitter::sendCode(unsigned short pin, unsigned long code, unsigne
 		// Recycle code as working var to save memory
 		code=dataBase4;
 		for (unsigned short i=0; i<12; i++) {
-			switch (code & B11) {
+			switch (code & 3) {
 				case 0:
 					digitalWrite(pin, HIGH);
 					delayMicroseconds(periodusec);

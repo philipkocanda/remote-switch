@@ -101,10 +101,10 @@ void RemoteReceiver::interruptHandler() {
 
 		// bit part durations can ONLY be 1 or 3 periods.
 		if (duration<=max1Period) {
-			receivedBit &= B1110; // Clear LSB of receivedBit
+			receivedBit &= 14; // Clear LSB of receivedBit
 		}
 		else if (duration>=min3Period && duration<=max3Period) {
-			receivedBit |= B1; // Set LSB of receivedBit
+			receivedBit |= 1; // Set LSB of receivedBit
 		}
 		else { // Otherwise the entire sequence is invalid
 			_state=-1;
@@ -116,16 +116,16 @@ void RemoteReceiver::interruptHandler() {
 			receivedCode*=3;
 
 			// Only 4 LSB's are used; trim the rest.
-			switch (receivedBit & B1111) {
-				case B0101: // short long short long == B0101
+			switch (receivedBit & 15) {
+				case 5: // short long short long == B0101
 					// bit "0" received
 					receivedCode+=0; // I hope the optimizer handles this ;)
 					break;
-				case B1010: // long short long short == B1010
+				case 10: // long short long short == B1010
 					// bit "1" received
 					receivedCode+=1;
 					break;
-				case B0110: // short long long short
+				case 6: // short long long short
 					// bit "f" received
 					receivedCode+=2;
 					break;
