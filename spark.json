@@ -1,0 +1,7 @@
+{
+  "name": "remote-switch",
+  "author": "Randy Simons",
+  "license": "GPLv3",
+  "version": "2.3.0",
+  "description": "This library provides an easy class for Arduino, to send and receive signals used by some common old style 433MHz remote control switches."
+}
