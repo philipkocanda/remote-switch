@@ -7,7 +7,6 @@
 #ifndef RemoteTransmitter_h
 #define RemoteTransmitter_h
 
-#define ARDUINO_H
 #include <stdint.h>
 #include <stddef.h>
 #include <stdlib.h>

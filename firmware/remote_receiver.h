@@ -7,7 +7,6 @@
 #ifndef RemoteReceiver_h
 #define RemoteReceiver_h
 
-#define ARDUINO_H
 #include <stdint.h>
 #include <stddef.h>
 #include <stdlib.h>
