@@ -5,7 +5,7 @@
  * License: GPLv3. See license.txt
  */
 
-#include "RemoteTransmitter.h"
+#include "remote_transmitter.h"
 
 
 /************
