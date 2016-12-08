@@ -1,4 +1,5 @@
 RemoteSwitch library v2.3.0 (20121229) for Arduino 1.0
+
 Originally authored by Randy Simons http://randysimons.nl/
 
 Original repository: https://github.com/hjgode/homewatch/tree/master/arduino/libraries/RemoteSwitch
